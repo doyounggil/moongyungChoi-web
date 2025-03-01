@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="container">
+            <a href="">
+            <i class="fa-solid fa-bars"></i>
+            </a>
+            <h1>
+                <button data-animation-scroll="true" data-target="#about">Moongyung Choi</button>
+            </h1>
+            <nav>
+                <ul>
+                    <li><button data-animation-scroll="true" data-target="#about">About</button></li>
+                    <li><button data-animation-scroll="true" data-target="#new">New</button></li>
+                    <li><button data-animation-scroll="true" data-target="#contact">contact</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--main-->
+    <main id="main">
+        <div class="container">
+            <h2>Moongyung Choi</h2>
+            <h3>Paris</h3>
+            <p>We aim to become a global group leading fashion</p>
+        </div>
+    </main>
+    <!--about-->
+    <section id="about">
+        <div class="container">
+            <div class="title">
+                <h4>Who is Moongyung Choi</h4>
+                <h2>About Moongyung Choi</h2>
+            </div>
+            <div class="about-self">
+                <div class="left">
+                    <img src="images/about.png" alt="옷사진">  
+                </div>
+                <div class="right">
+                    <h3>Hello, <span>I'm Moongyung Choi</span></h3>
+                    <p>I'm global fashion designer</p> 
+                    <p>And graduated from Incheon National University in Korean with the department of fashion industry</p>
+                    <p>I've always wanted my brand "Moongyung Choi", which started since 2025, to go global</p>
+                    <p>Now, Enjoy my luxury brand Moongyung Choi!</p>
+                    <div class="social">
+                        <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--new-->
+    <section id="new">
+        <div class="container">
+            <div class="title">
+                <h4>Moongyung Choi</h4>
+                <h3>BEST COLLECTION</h3>
+            </div>
+            <div class="newproduct">
+                <div class="left">
+                    <img src="../images/new1.JPG" alt="옷사진">  
+                    <p>문경초이 시그니처 코트</p>
+                </div>
+                <div class="center">
+                    <img src="../images/new2.JPG" alt="옷사진">  
+                    <p id="cen">천연 가죽 가방</p>
+                </div>
+                <div class="right">
+                    <img src="../images/new3.JPG" alt="옷사진">  
+                    <p>긴 치마</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <button>더 많은 신상품 보기</button>
+            </div>
+        </div>
+    </section>
+    <!--background-->
+    <div class="bg"></div>
+    <!--contactwithme-->
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h4>CONTACT</h4>
+                <h2>Contact With Me</h2>
+            </div>
+            <div class="contact-me">
+                <div class="left">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>    
+                        </div>
+                        <div class="info-text">
+                            <h3>phone</h3>
+                            <p>010-5914-5426</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>  
+                        </div>
+                        <div class="info-text">
+                            <h3>email</h3>
+                            <p>moongyungchoi @naver.com</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>    
+                        </div>
+                        <div class="info-text">
+                            <h3>addres</h3>
+                            <p>Teheran-ro, Gangnam-gu, Seoul, Republic of Korea</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="text" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">message</label>
+                            <textarea id="msg"></textarea>
+                        </div>
+                        <button>send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="scroll.js"></script>
+</body>
+</html>
