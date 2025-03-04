@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.7 애니메이션 속성으로 전환 효과 제어하기</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: bgChange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards; /* 애니메이션 실행이 끝나면 종료지점의 상태 스타일을 그대로 유지, 처음으로 돌아오지 않음 */
+            animation-iteration-count: 2; /* 2번 반복 */
+            animation-play-state: running;
+            animation-direction: reverse; /* 애니메이션 진행방향이 역방향 */
+            animation-timing-function: ease; /* 애니메이션 속도 조절 */
+            /* 단축속성 animation으로 위에 것들 한 번에 표현 가능 */
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+        @keyframes bgChange /* 식별자는 고유해야함, 다른 keyframes과 중복되면 안됨 */{
+            0%/*시작시점, from이라 해도 된다*/{
+                background-color: blue;
+            }
+            50%/* %로 표현하면 이렇게 중간중간에 효과 넣을 수 있음 */{
+                background-color: pink;
+            }
+            100%/*종료시점, to라 해도 된다*/{
+                background-color: orange;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

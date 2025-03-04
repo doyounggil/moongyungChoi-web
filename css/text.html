@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 속성</title>
+    <style>
+        h1 {
+            font-family: dotum; /* 글꼴 지정 */ /* 웹브라우저에서 지원 안 하는 폰트는 적용 안 됨 */ /* 실무에서는 웹폰트?만 거의 사용 */
+            font-size: 16px;
+            font-weight: 300; /* 400은 normal과 같고 700은 bold와 같음, 무조건 100단위로 써야 함 */
+                              /* 그 글꼴에서 특정 굵기를 지원하지 않으면 굵기는 지원 안된다 */
+            font-variant: small-caps; /* font-variant는 영어에서만 작용 */
+            text-align: center;/* text 정렬을 지정할 때 사용하는 속성 */
+            text-decoration: underline; /* text를 꾸밀 때 사용하는 속성 */
+            letter-spacing: 16px;/* text text사이의 간격(자간)을 지정할 때 사용하는 속성 */
+            line-height: 2;/* 행간의 간격을 지정할 때 사용하는 속성 */
+        } 
+        h2{
+            font-family: dotum, 바탕, "Times New Roman",serif; /* font-family속성은 지원 안 되는 글꼴이 많기 때문에 generic font를 같이 써줘야 함 */
+        } /* 여러 글꼴 나열시 나열 순으로 글씨 적용(적용 안되면 그 다음 글꼴 적용) */ /* Times New Roman처럼 띄어쓰기(공백)가 있는 경우 따옴표 사용 */
+    </style>
+</head>
+<body>
+    <h1>My name is do-younggil. Thanks you </h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.4 노드 추가/삭제하기</title>
+</head>
+<body>
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+    <p>text</p>
+    <h1>text</h1>
+    <script>
+        const aE1 = document.createElement("a"); // 요소노드 생성 후 해당 변수에 할달
+        const textNode = document.createTextNode("링크");
+        const hrefAttr = document.createAttribute("href");
+        hrefAttr.value = 'https://www.gilbut.co.kr' //value 속성으로 herf에 값 할당
+        aE1.setAttributeNode(hrefAttr); // aEl에 hrefAttr를 추가
+        aE1.appendChild(textNode); //aE1에 textNode를 추가
+        document.body.appendChild(aE1); // 기존 노드(body)에 자식 노드(a)를 연결'
+
+        //노드 삭제
+        const hE1 = document.querySelector("h1");
+        hE1.parentNode.removeChild(hE1); //removeChild는 선택한 노드의 부모에서 해야함. 따라서 parentNode로 부모노드로 이동
+
+        // p 다 삭제
+        //방법 1
+        // const pE1 = document.querySelectorAll("p");
+        // pE1.forEach((A)=>{
+        //     A.parentNode.removeChild(A);
+        // });
+        //방법2
+        const childNodes = document.body.childNodes;
+        console.log(childNodes);
+        childNodes.forEach((node)=>{
+            console.log(node.nodeName);
+            if(node.nodeName == 'P'){
+                node.parentNode.removeChild(node);
+            }
+        })
+        console.log(childNodes)
+    </script>
+</body>
+</html>

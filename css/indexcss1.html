@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 다루기</title>
+    <style>
+        /* *은 전체 선택자 */
+        *{
+            color:red;
+        }
+        /* 태그 선택자, 적용하고 싶은 태그 사용 */
+        dt{
+            color: red;
+        }
+        /* id 선택자 */
+        /* # + 속성값 */
+        #h{
+            color: green;
+        }
+        /* class 선택자 */
+        /* . + 속성값  */
+        .red{
+            color: red;
+        }
+
+        .blue{
+            color: blue;
+        }
+        /* 속성 선택자 */
+        [class] {
+            color: red;
+        }
+        /* [class="red"] {
+            color: red; 
+        }*/ /* 이런식으로 class의 속성값을 지정해줘도 된다. */
+        
+        /* 그룹 선택자*/
+        /* h1, p {
+            color: blue;
+        }*/
+        /* 자식 선택자 */
+        div > h1 {
+            color: red;
+        }
+        /* 하위 선택자 */
+        .box hi {
+            color: red;
+        }
+        /* 인접 형제 선택자*/
+        /* 바로 뒤에 오는 하나의 인접 형제만 선택해서 적용됨 */
+        h2 + h3 {
+            color: red;
+        }
+        /* 일반 형제 선택자*/
+        /* 바로 뒤에 오는 하나의 인접 형제만 선택해서 적용되는 게 아니라 h3 모두가 선택되어 적용됨 */
+        h2 ~ h3 {
+            color: red;
+        }
+        /* 가상요소 선택자 */
+        a::after {
+            content: "test";
+        }
+        /* 가상 class 선택자 */ 
+        /* hover, active 등이 많이 쓰임*/
+        a:link {
+            color: blue;
+        }
+        a:visited{
+            color: red;
+        }
+        input:focus{
+            color: red;
+        }
+        input:checked+label {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 참고 id 속성은 유니크 해야함. 다른 애가 쓰면 안된다.-->
+    <h1 id="h">h1 tag</h1>
+    <!-- 참고 id 속성과 다르게 class 속성은 중복 사용 가능-->
+    <p class="red" >p tag</p>
+    <!-- 하나의 class 안에 여러 속성값들이 들어 갈 수 있음-->
+    <p class="red blue="> P tag </p>
+    <br>
+    <div>
+        <h2>h2 tag</h2>
+    </div>
+    <h2>h2 tag</h2>
+    <div class="box">s
+        <h1>h1 tag-1</h1>
+    </div>
+    <div>
+        <h1>h1 tag-2</h1>
+    </div><br>
+    <h1>h1 tag</h1>
+    <h2>h2 tag</h2>
+    <h3>h3 tag</h3>
+    <h3>h3 tag</h3> <br>
+    <a href="#">link</a> <br>
+    <input type="checkbox" checked>
+    <label for="">성별</label>
+
+    <dl>
+        <dt>CSS</dt>
+        <dd>CSS는 Cascading Style Sheets의 약자입니다.</dd>
+</body>
+</html>

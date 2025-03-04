@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.8 변형 효과 적용하기</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*transform: translateX(100px);*/
+            margin: 100px auto;
+        /* 참고 */ /* 도형을 웹브라우저 중심에 놓는 법(실무에서 많이 사용됨) */
+        /* position: absolute;
+        left: 50%;
+        top: 50%;   (여기까지하면 도형의 왼쪽 위 모서리가 웹브라우저 중심에 옴)
+        transform: translate(-50%, -50%);*/
+        } 
+        .box:hover{
+            /* transform: scale(2); */ /* x y방향으로 2배 */
+            transform: rotate(30deg);
+            transform-origin: top left; /* 원래의 회전기준점(중심)을 다른 기준점으로 변경 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div> 
+</body>
+</html>

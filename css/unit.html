@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위(unit)</title>
+    <style>
+        .inner{
+            font-size: 32px;
+        }
+        p{
+            font-size: 2em; /* em은 부모 픽셀의 배수 */ /* 32px * 2 */
+        }                   /* rem은 최상위 HTML의 폰트 크기의 배수 */
+                            /* %는 웹브라우저 기본 크기인 16px에 %적용된 크기 */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <p>lorem</p>
+        </div>
+    </div>
+</body>
+</html>
